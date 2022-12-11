@@ -20,6 +20,11 @@ while len(codes) < num_codes:
     if new_code not in codes:
         codes.append(new_code)
 
+# Save the codes to a file
+with open("codes.txt", "w") as f:
+    for c in codes:
+        f.write(c + "\n")
+
 # Print the list of codes
 for c in codes:
     print(c)
